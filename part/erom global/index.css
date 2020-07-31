@@ -1,0 +1,476 @@
+html {
+    font-family: 'Poppins', 'Malgun Gothic', "나눔고딕", NanumGothic, "Nanum Gothic", "돋움", Dotum, Arial, sans-serif;
+}
+
+/* 노말라이즈 */
+body,
+ul,
+li,
+h1 {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+label[for] {
+    cursor: pointer;
+    user-select: none;
+}
+
+/* 라이브러리 */
+.block {
+    display: block;
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+.absolute-left {
+    position: absolute;
+    left: 0;
+}
+
+.absolute-right {
+    position: absolute;
+    right: 0;
+}
+
+.absolute-bottom {
+    position: absolute;
+    bottom: 0;
+}
+
+.absolute-top {
+    position: absolute;
+    top: 0;
+}
+
+.absolute-center {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.absolute-middle {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.absolute-middle.absolute-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.relative {
+    position: relative;
+}
+
+.cell {
+    float: left;
+    box-sizing: border-box;
+}
+
+.cell-right {
+    float: right;
+    box-sizing: border-box;
+}
+
+.row::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.clear-both {
+    clear: both;
+}
+
+.img-box>img {
+    width: 100%;
+    display: block;
+}
+
+.con {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.margin-0-auto {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.text-align-center {
+    text-align: center;
+}
+
+.text-align-right {
+    text-align: right;
+}
+
+.line-height-0 {
+    line-height: 0;
+}
+
+.line-height-0>* {
+    line-height: normal;
+}
+
+.width-30px {
+    width: 30px;
+}
+
+.width-35px {
+    width: 35px;
+}
+
+.width-40px {
+    width: 35px;
+}
+
+.width-45px {
+    width: 35px;
+}
+
+.width-50px {
+    width: 50px;
+}
+
+.width-80px {
+    width: 80px;
+}
+
+.width-100px {
+    width: 100px;
+}
+
+.width-100p {
+    width: 100%;
+}
+
+.width-60p {
+    width: 60%;
+}
+
+.width-55p {
+    width: 55%;
+}
+
+.width-50p {
+    width: 50%;
+}
+
+.width-45p {
+    width: 45%;
+}
+
+.width-40p {
+    width: 40%;
+}
+
+.width-30p {
+    width: 30%;
+}
+
+.width-35p {
+    width: 35%;
+}
+
+.width-100p-except-30px {
+    width: calc(100% - 30px);
+}
+
+.width-100p-except-35px {
+    width: calc(100% - 35px);
+}
+
+.width-100p-except-40px {
+    width: calc(100% - 40px);
+}
+
+.width-100p-except-50px {
+    width: calc(100% - 50px);
+}
+
+.width-100p-except-80px {
+    width: calc(100% - 80px);
+}
+
+.width-100p-except-100px {
+    width: calc(100% - 100px);
+}
+
+.height-100p {
+    height: 100%;
+}
+
+.height-50p {
+    height: 50%;
+}
+
+.border-box {
+    box-sizing: border-box;
+}
+
+.font-size-dot-8rem {
+    font-size: .8rem;
+}
+
+.table-row {
+    display: table;
+}
+
+.table-row.row::after {
+    display: inline;
+    clear: non;
+}
+
+.table-row>.cell {
+    float: none;
+    display: table-cell;
+}
+
+.border-red {
+    border: 5px solid red;
+}
+
+.border-green {
+    border: 5px solid green;
+}
+
+.border-blue {
+    border: 5px solid blue;
+}
+
+.border-gold {
+    border: 5px solid gold;
+}
+
+.border-pink {
+    border: 5px solid pink;
+}
+
+/* 라이브러리 - flex */
+*>.flex {
+    display: flex;
+}
+
+*>.flex-grow-1 {
+    flex-grow: 1;
+}
+
+*>.flex-jc-c {
+    justify-content: center;
+}
+
+*>.flex-jc-s {
+    justify-content: flex-start;
+}
+
+*>.flex-jc-e {
+    justify-content: flex-end;
+}
+
+*>.flex-jc-sb {
+    justify-content: space-between;
+}
+
+*>.flex-ai-c {
+    align-items: center;
+}
+
+*>.flex-ai-s {
+    align-items: flex-start;
+}
+
+*>.flex-ai-e {
+    align-items: flex-end;
+}
+
+*>.flex-as-s {
+    align-self: stretch;
+}
+
+*>.flex-as-c {
+    align-self: center;
+}
+
+*>.flex-as-s {
+    align-self: flex-start;
+}
+
+*>.flex-as-e {
+    align-self: flex-end;
+}
+
+*>.flex-column-nowrap {
+    flex-flow: column nowrap;
+}
+
+*>.flex-column-wrap {
+    flex-flow: column wrap;
+}
+
+*>.flex-row-wrap {
+    flex-flow: row wrap;
+}
+
+.flex-ch-basis-0>* {
+    flex-basis: 0;
+}
+
+*>.flex-1-0-0 {
+    flex: 1 0 0;
+}
+
+/* 커스텀 */
+.con-min-width {
+    min-width: 1356px;
+}
+
+.con {
+    width: 1356px;
+}
+
+/* 탑바 */
+.top-bar {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    padding-left: 100px;
+    padding-right: 100px;
+    position: fixed;
+    background-color: white;
+    box-sizing: border-box;
+}
+
+.top-bar>.menu-box-1>ul {
+    padding: 0 15px;
+}
+
+.top-bar .menu-box-2>ul>li {
+    width: 100px;
+}
+
+.top-bar .menu-box-1>ul>li,
+.top-bar .menu-box-2>ul>li {
+    text-align: center;
+    padding: 0 15px;
+}
+
+.top-bar>.menu-box-1 ul>li>a:hover,
+.top-bar>.menu-box-1 ul ul>li li>a:hover {
+    color: #00AC4F;
+    font-weight: bold;
+}
+
+.top-bar>.menu-box-1 ul>li>a,
+.top-bar>.menu-box-1 ul ul>li li>a {
+    color: rgb(102, 102, 102);
+    font-weight: 400;
+    letter-spacing: -0.65px;
+    width: 140px;
+}
+
+
+.top-bar>.menu-box-1>ul>li:hover>ul {
+    display: block;
+    border: 1px solid black;
+    background-color: white;
+    top: 80px;
+    padding: 20px 0;
+    width: 11%;
+    height: auto;
+    position: absolute;
+}
+
+.top-bar .menu-box-1>ul ul {
+    display: none;
+}
+
+.top-bar .menu-box-1>ul ul>li {
+    padding: 10px;
+    position: relative;
+}
+
+.menu-box-2>ul>li::after {
+    content: "|";
+    position: absolute;
+    top: 40%;
+    width: 1px;
+    height: 14px;
+    color: #d1d1d1;
+    display: block;
+    right: 260px;
+    left: auto;
+    margin: 0 5px;
+}
+
+
+/* 토글 버튼 */
+
+.btn-toggle-side-bar {
+    width: 20px;
+    height: 20px;
+    position: relative;
+    margin: 0 30px;
+}
+
+.btn-toggle-side-bar>div {
+    background-color: black;
+    width: 5px;
+    height: 5px;
+    position: absolute;
+}
+
+.btn-toggle-side-bar>div:nth-child(3n + 2) {
+    left: 44%;
+}
+
+.btn-toggle-side-bar>div:nth-child(3n + 3) {
+    left: 85%;
+}
+
+.btn-toggle-side-bar>div:nth-child(4) {
+    top: 44%;
+}
+
+.btn-toggle-side-bar>div:nth-child(5) {
+    top: 44%;
+}
+
+.btn-toggle-side-bar>div:nth-child(6) {
+    top: 44%;
+}
+
+.btn-toggle-side-bar>div:nth-child(7) {
+    top: 85%;
+}
+
+.btn-toggle-side-bar>div:nth-child(8) {
+    top: 85%;
+}
+
+.btn-toggle-side-bar>div:nth-child(9) {
+    top: 85%;
+}
+
+/* 토글 버튼 끝 */
+
+.page-1 {
+    background-image: url(http://eromglobal.com/images/main/main_visual_01_m.jpg);
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
