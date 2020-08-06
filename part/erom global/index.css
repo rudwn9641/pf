@@ -377,18 +377,24 @@ label[for] {
   color: #00ac4f;
 }
 
+.top-bar>.menu-box-1>ul ul>li:hover>a {
+  font-weight: bold;
+  color: #00ac4f;
+}
+
 
 /* 2차 메뉴 */
 
 .top-bar>.menu-box-1>ul>li:hover>ul {
   display: block;
-  width: auto;
+  width: 80%;
   height: auto;
-  top: 80px;
-  left:-25px;
-  right:0;
+  top: -20px;
+  left:auto;
+  right:auto;
   background-color: white;
   border: 2px solid #333333;
+  position: relative;
 }
 
 .top-bar>.menu-box-1>ul ul {
@@ -399,10 +405,26 @@ label[for] {
 .top-bar>.menu-box-1>ul ul>li {
   text-align: center;
   position: relative;
-  width: 100%;
 }
 
 .top-bar>.menu-box-1>ul ul>li>a {
   display: block;
   padding: 13px 10px;
+}
+
+/* 메뉴박스2 */
+
+.menu-box-2 {
+  border: 3px solid gold;
+  padding: 0 10px;
+}
+
+/* 페이지 이미지 */
+
+.page-1 {
+  background-image:url(https://eromglobal.com/images/main/main_visual_01.jpg);
+  height:100vh;
+  background-position:center;
+  background-size:cover;
+  background-repeat:no-repeat;
 }
