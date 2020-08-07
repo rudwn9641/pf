@@ -365,9 +365,10 @@ label[for] {
   text-align: center;
 }
 
-.top-bar>.menu-box-1>ul>li>a {
+.top-bar>.menu-box-1>ul>li>a{
   color: #333333;
   padding: 0 10px;
+  font-size: 14px;
 }
 
 /* 폰트 변화 */
@@ -375,12 +376,42 @@ label[for] {
 .top-bar>.menu-box-1>ul>li:hover>a {
   font-weight: bold;
   color: #00ac4f;
+  /* 글씨 효과 */
+  opacity:1;
+  transition: 0.5s;
 }
 
 .top-bar>.menu-box-1>ul ul>li:hover>a {
   font-weight: bold;
   color: #00ac4f;
+  /* 글씨 효과 */
+  opacity:1;
+  transition: 0.5s;
 }
+
+.top-bar>.menu-box-1>ul ul>li:hover>a::after {
+  position: absolute;
+  display: block;
+  content: '';
+  width: 0;
+  height: 0;
+  bottom: -1px;
+  background-color: #00ac4f;
+}
+
+.top-bar>.menu-box-1>ul ul>li:hover>a::before {
+  position: absolute;
+  display: block;
+  content: '';
+  width: 120px;
+  height: 3px;
+  bottom: -1px;
+  background-color: #00ac4f;
+  opacity:1;
+  transition: 0.5s;
+}
+
+/* 글씨 효과 끝 */
 
 
 /* 2차 메뉴 */
@@ -390,16 +421,17 @@ label[for] {
   width: 80%;
   height: auto;
   top: -20px;
-  left:auto;
-  right:auto;
   background-color: white;
   border: 2px solid #333333;
   position: relative;
+  padding: 15px 0;
 }
 
 .top-bar>.menu-box-1>ul ul {
   display: none;
   position: absolute;
+  left: 15px;
+  right: 0;
 }
 
 .top-bar>.menu-box-1>ul ul>li {
@@ -409,7 +441,8 @@ label[for] {
 
 .top-bar>.menu-box-1>ul ul>li>a {
   display: block;
-  padding: 13px 10px;
+  padding: 10px 20px;
+  font-size: 14px;
 }
 
 /* 메뉴박스2 */
