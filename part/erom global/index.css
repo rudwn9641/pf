@@ -373,7 +373,7 @@ label[for] {
 
 /* 폰트 변화 */
 
-.top-bar>.menu-box-1>ul>li:hover>a {
+.top-bar>.menu-box-1>ul>li>a:hover {
   font-weight: bold;
   color: #00ac4f;
   /* 글씨 효과 */
@@ -381,7 +381,7 @@ label[for] {
   transition: 0.5s;
 }
 
-.top-bar>.menu-box-1>ul ul>li:hover>a {
+.top-bar>.menu-box-1>ul ul>li>a:hover {
   font-weight: bold;
   color: #00ac4f;
   /* 글씨 효과 */
@@ -389,17 +389,7 @@ label[for] {
   transition: 0.5s;
 }
 
-.top-bar>.menu-box-1>ul ul>li:hover>a::after {
-  position: absolute;
-  display: block;
-  content: '';
-  width: 0;
-  height: 0;
-  bottom: -1px;
-  background-color: #00ac4f;
-}
-
-.top-bar>.menu-box-1>ul ul>li:hover>a::before {
+.top-bar>.menu-box-1>ul ul>li>a::before {
   position: absolute;
   display: block;
   content: '';
@@ -407,8 +397,13 @@ label[for] {
   height: 3px;
   bottom: -1px;
   background-color: #00ac4f;
-  opacity:1;
-  transition: 0.5s;
+  visibility: hidden;
+  opacity:0;
+  transition:opacity 0.5s;
+}
+
+.top-bar>.menu-box-1>ul ul>li:hover>a::before {
+  opacity: 1;
 }
 
 /* 글씨 효과 끝 */
