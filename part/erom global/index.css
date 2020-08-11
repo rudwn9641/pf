@@ -391,15 +391,26 @@ label[for] {
 
 .top-bar>.menu-box-1>ul ul>li>a::before {
   position: absolute;
+  opacity:0;
+  content: '';
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  background: #00ac4f;
+  opacity: 0;
+  transition: opacity .5s;
+}
+
+.top-bar>.menu-box-1>ul ul>li:hover>a::before {
   display: block;
   content: '';
-  width: 120px;
-  height: 3px;
-  bottom: -1px;
-  background-color: #00ac4f;
-  visibility: hidden;
-  opacity:0;
-  transition:opacity 0.5s;
+  width: 100px;
+  height: 2px;
+  left: 30px;
+  bottom: 0;
+  background: #00ac4f;
+  opacity:1;
+  transition:  all .5s;
 }
 
 .top-bar>.menu-box-1>ul ul>li:hover>a::before {
