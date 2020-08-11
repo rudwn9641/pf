@@ -409,22 +409,25 @@ width:90%;
 
 /* 2차 메뉴 */
 
-.top-bar>.menu-box-1>ul>li:hover>ul {
-  display: block;
+.top-bar>.menu-box-1>ul ul {
+  position: absolute;
   width: 80%;
-  height: auto;
-  top: -20px;
+  height: 0;
+  left: 15px;
+  right: 0;
   background-color: white;
-  border: 2px solid #333333;
-  position: relative;
+  border: 1px solid #333333;
+  overflow: hidden;
+  opacity: 0;
+  transition: height .5s;
   padding: 15px 0;
 }
 
-.top-bar>.menu-box-1>ul ul {
-  display: none;
-  position: absolute;
-  left: 15px;
-  right: 0;
+.top-bar>.menu-box-1>ul>li:hover>ul {
+  display: block;
+  height: auto;
+  top: 70px;
+  opacity: 1;
 }
 
 .top-bar>.menu-box-1>ul ul>li {
