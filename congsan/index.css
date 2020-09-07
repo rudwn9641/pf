@@ -355,8 +355,6 @@ label[for] {
     box-sizing: border-box;
 }
 
-.top-bar>.logo {}
-
 .top-bar>.logo>img {
     width: 170px;
 }
@@ -388,7 +386,7 @@ label[for] {
     position: absolute;
     left: 0;
     right: 0;
-    top: 10px;
+    top: 20px;
 }
 
 .menu-bar>ul ul {
@@ -399,12 +397,24 @@ label[for] {
     width: 100%;
 }
 
+.menu-1 ul>li>ul {
+    display: flex;
+    position: absolute;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    visibility: hidden;
+    justify-content: center;
+}
+
 .menu-1 ul>li:hover>ul {
     display: block;
+    opacity:1;
+    visibility:visible;
 }
 
 .menu-bar>ul>li>a {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     display: block;
     padding: 0 40px;
     text-align: center;
@@ -432,8 +442,9 @@ label[for] {
 /* 메인 이미지 */
 
 .page-1 {
+    background-image: url(page.img/bakery.jpg);
+    height: 100vh;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    position: absolute;
 }
